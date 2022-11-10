@@ -87,7 +87,7 @@ async function run(){
 
 
       //  ==get single items===
-      
+
       app.get("/services/:id", async (req, res) => {
         try{
           const id = req.params.id;
@@ -100,8 +100,10 @@ async function run(){
         }
         });
   
-      // get reviews for specific email
-  
+
+
+      // ==get reviews for specific email==
+
       app.get("/reviews", verifyJWT, async (req, res) => {
 
           const decoded = req.decoded;
