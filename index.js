@@ -45,13 +45,14 @@ function verifyJWT (req, res, next){
 
 // ===start functin===
 async function run(){
+
     try{
        const serviceCollection = client.db('plumboy').collection('services')
        const reviewCollection = client.db('plumboy').collection('reviews')
 
 
     
-    // jwt
+    // create jwt token
     app.post("/jwt", (req, res) => {
         const user = req.body;
         const token = jwt.sign(user, process.env.SICRET_TOKEN, {
@@ -74,7 +75,7 @@ async function run(){
       });
   
 
-      
+
       // post a service
   
       app.post("/services", async (req, res) => {
