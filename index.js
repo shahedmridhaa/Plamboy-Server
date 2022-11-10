@@ -65,7 +65,7 @@ async function run(){
 
 
 
-    //   ==get item ==
+    //   ==get item form service==
     app.get("/services", async (req, res) => {
         const limit = parseInt(req.query.limit);
         const query = {};
